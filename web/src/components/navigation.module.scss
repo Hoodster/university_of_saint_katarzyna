@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+
+    a {
+        font-variant: all-small-caps;
+        padding: 5px 8px;
+        font-size: 16pt;
+        font-weight: 600;
+        font-stretch: semi-expanded;
+        padding: 10px 0;
+        align-self: center;
+    }
+
+    a {
+        height: 490px;
+    }
+}

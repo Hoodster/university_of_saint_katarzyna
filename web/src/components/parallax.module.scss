@@ -1,0 +1,15 @@
+#background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vh;
+    min-height: 100vw;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vw;
+}
