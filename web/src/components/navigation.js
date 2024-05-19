@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './navigation.module.scss'
 
-function Navigation({navItems}) {
+function Navigation({ navItems }) {
     return (
         <nav style={styles}>
             <Link to={'/'}>LOGO</Link>
-            {navItems.map(item => <Link style={{padding: '5px 8px'}} id={item.name} to={item.destination}>{item.name}</Link>)}
+            {navItems.map(item => <Link style={{ padding: '5px 8px' }} key={item.name} to={item.destination}>{item.name}</Link>)}
         </nav>
     )
 }
