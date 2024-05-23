@@ -100,13 +100,25 @@ const content = {
             {
                 bgSource: '',
                 template: 'default',
-                headline: 'Do you start or maybe continue? We offer possibiity of graduation from bachelor up to PhD.',
-                subHeadlines: ['Just for 799PLN/semester.'],
+                headline: 'Do you start or maybe continue?',
+                subHeadlines: [
+                    'We offer possibiity of graduation from bachelor up to PhD.',
+                    'Just for 799PLN/semester.'
+                ],
                 options: {
                     eduLevels: [
-                        'bachelor',
-                        'master',
-                        'PhD'
+                        {
+                            level: 'bachelor',
+                            url: '/candidates/search#bachelor'
+                        },
+                        {
+                            level: 'master',
+                            url: '/candidates/search#master'
+                        },
+                        {
+                            level: 'phd',
+                            url: '/candidates/search#phd'
+                        }
                     ]
                 }
             },
@@ -143,9 +155,8 @@ const content = {
             {
                 bgSource: '',
                 template: 'default',
-                headline: 'Enforced by higher powers (university project) we sat down to hardly think together how to define university of tomorrow.'
-                    + 'In fact we did bunch of cool ideas.',
-                subHeadlines: [],
+                headline: 'Knowledge by experience',
+                subHeadlines: ['check what interesting projects you can work with'],
                 options: {}
             },
             {

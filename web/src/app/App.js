@@ -1,7 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
-import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import useAppRouting from './hooks/useAppRouting';
+import useAppRouting from '../hooks/useAppRouting';
 
 
 function App() {

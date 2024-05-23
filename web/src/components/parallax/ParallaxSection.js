@@ -1,16 +1,14 @@
-import styles from 'parallax.module.scss'
-import getTemplate from '../../templates/templateService'
+import styles from './parallax.module.scss';
+import useGetBackground, { SourceType } from '../../hooks/useGetBackground';
+import TitleSlide from '../../_templates/TitleSlide/TitleSlide';
 
-function ParallaxSection(slideData) {
-    const {bgSource, headline, subHeadlines, options} = slideData
-
+function ParallaxSection({ key, bgSource, template, headline, subHeadlines, options }) {
+    //const section = useTemplate({ template, headline, subHeadlines, options });
+    const background = useGetBackground(bgSource, SourceType.video);
     return (
-        <div k>
-            <video autoPlay muted loop id={styles.background}>
-                <source src={bgSource} type='video/mp4'/>
-            </video>
-
-            <div className={styles.content}>{getTemplate(headline, subHeadlines, options)}</div>
+        <div key={key} className={styles.content}>
+            {background}
+            <TitleSlide headline={headline} subHeadlines={subHeadlines} options={options} />
         </div>
     )
 }

@@ -4,7 +4,7 @@ import Navigation from "./navigation";
 
 function Root() {
     const navItems = content.root.nav
-    console.log(navItems)
+
     return (
         <>
             <div>

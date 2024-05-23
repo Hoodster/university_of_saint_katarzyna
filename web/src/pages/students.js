@@ -1,29 +1,15 @@
-import useTemplate from "@root/_templates/useTemplate"
+import ParallaxContainer from "../components/parallax/ParallaxContainer";
+import ParallaxSection from "../components/parallax/ParallaxSection";
 
 
 function Students() {
     const students = window.content.students
     const slidesData = students.slides
     // const options = students.options
-
-    function getTemplate(slide) {
-        const s = useTemplate(slide);
-
-        return s;
-    }
-
-    const slides = slidesData.map(slide => {
-        const f = useTemplate(slide);
-        console.log(slide)
-        return useTemplate(slide)
-    })
-
     return (
-        <div>
-            {
-                slides
-            }
-        </div>
+        <ParallaxContainer>
+            {slidesData.map((slide, i) => <ParallaxSection key={`student-sect-${i}`} headline={slide.headline} subHeadlines={slide.subHeadlines} />)}
+        </ParallaxContainer>
     )
 }
 

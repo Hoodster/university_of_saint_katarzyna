@@ -1,7 +1,5 @@
-import content from '../_content'
-
 function Employees() {
-    const employeesContent = content.employees
+    const employeesContent = window.content.employees
 
     return (
         <div key={'employees'}>
