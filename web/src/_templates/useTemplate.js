@@ -1,3 +1,4 @@
+import ActionSlide from "./ActionSlide/ActionSlide";
 import SlideBase from "./SlideBase/SlideBase";
 import TitleSlide from "./TitleSlide/TitleSlide";
 
@@ -11,8 +12,9 @@ function useTemplate({ template, headline, subHeadlines, options }) {
 }
 
 export const Templates = Object.freeze({
-    default: <SlideBase />,
-    title: <TitleSlide />
+    'default': <SlideBase />,
+    'title': <TitleSlide />,
+    'action': <ActionSlide />
 })
 
 export default useTemplate;

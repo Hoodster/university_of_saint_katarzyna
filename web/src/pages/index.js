@@ -4,6 +4,6 @@ import Home from "./home";
 import Students from "./students";
 import Business from "./business"
 import News from "./news";
+import PageBase from "./_pagebase";
 
-const index = { Students, Home, Employees, Business, News, ErrorPage }
-export default index
+export { Students, Home, Employees, Business, News, ErrorPage, PageBase };

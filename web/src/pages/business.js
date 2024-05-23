@@ -1,5 +1,5 @@
-function Business() {
-	return <></>
-}
+import PageBase from "./_pagebase"
 
-export default Business
+const Business = () => (<PageBase contentKey={'business'} />);
+
+export default Business;

@@ -1,3 +1,5 @@
+import PageBase from "./_pagebase";
+
 export default function ErrorPage(code) {
-	return <h1>code</h1>
+	return <PageBase contentKey={'error'} data-errorCode={code} />
 }

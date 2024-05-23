@@ -1,3 +1,5 @@
+import Granim from "granim";
+
 /**
  * 
  * @param {*} source 
@@ -9,9 +11,23 @@ function useGetBackground(source, sourceType) {
 		<video src={source} loop autoPlay muted />
 	);
 
-	const getGradientComponent = () => (
-		<video src={source} loop />
-	)
+	const getGradientComponent = () => {
+		new Granim({
+			element: '#gradient-background',
+			direction: 'top-bottom',
+			stateTransitionSpeed: 0.4,
+			states: {
+				"default-state": {
+					gradients: [
+						['#ff9966', '#ff5e62'],
+						['#00F260', '#0575E6'],
+						['#e1eec3', '#f05053']
+					]
+				}
+			}
+		})
+		return <canvas id="gradient-background" />
+	}
 
 	switch (sourceType) {
 		case SourceType.video:

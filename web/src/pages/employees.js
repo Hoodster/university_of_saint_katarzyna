@@ -1,18 +1,5 @@
-function Employees() {
-    const employeesContent = window.content.employees
+import PageBase from "./_pagebase";
 
-    return (
-        <div key={'employees'}>
-            {employeesContent.slides.map(x =>
-                <div style={{ height: '100vh', width: '100vh' }}>
-                    <h1 style={{ font: 'Futura', bottom: 20, left: 10, fontWeight: 'bold', fontSize: '30px', wordWrap: 'break-word' }}>
-                        {x.headline}
-                    </h1>
-                    {x.subHeadlines.map(s => <h3 key={s}>{s}</h3>)}
-                </div>
-            )}
-        </div>
-    )
-}
+const Employees = () => (<PageBase contentKey={'employees'} />);
 
-export default Employees
+export default Employees;

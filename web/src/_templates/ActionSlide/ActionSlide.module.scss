@@ -1,0 +1,24 @@
+@import '../_styles/utils.scss';
+
+@include init-template();
+
+.container {
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: repeat(7, auto);
+	grid-template-areas: 
+	". . . . .",
+	". headline . . .",
+	". subHeadlines subHeadlines . .",
+	". . . . .",
+	". action  action action .",
+	". . . . .",
+	". . . . .";
+
+	h1 {
+		grid-area: headline;
+	}
+
+	h2 {
+		grid-area: subHeadlines;
+	}
+}

@@ -4,7 +4,7 @@ import styles from './navigation.module.scss'
 function Navigation({ navItems }) {
     return (
         <nav style={styles}>
-            <Link to={'/'}>LOGO</Link>
+            <Link to={'/'}>ST. KATHERINE</Link>
             {navItems.map(item => <Link style={{ padding: '5px 8px' }} key={item.name} to={item.destination}>{item.name}</Link>)}
         </nav>
     )

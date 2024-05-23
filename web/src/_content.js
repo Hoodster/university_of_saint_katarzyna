@@ -94,7 +94,7 @@ const content = {
                 bgSource: '',
                 template: 'default',
                 headline: 'Your future is also ours,',
-                subHeadlines: ['Let\'s take care of it together'],
+                subHeadlines: ['let\'s take care of it together'],
                 options: {}
             },
             {
