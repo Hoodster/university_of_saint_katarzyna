@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
-import content from "../content";
+import content from "../_content";
 import Navigation from "./navigation";
 
 function Root() {
     const navItems = content.root.nav
     console.log(navItems)
-    return(
+    return (
         <>
             <div>
-            <Navigation navItems={navItems}/>
-            <Outlet/>
+                <Navigation navItems={navItems} />
+                <Outlet />
             </div>
         </>
     )

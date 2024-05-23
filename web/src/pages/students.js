@@ -1,18 +1,22 @@
-import content from '../content'
-import getTemplate from '../templates/templateService'
+import useTemplate from "@root/_templates/useTemplate"
+
 
 function Students() {
-    const slidesData = content.students.slides
-    const options = content.students.options
+    const students = window.content.students
+    const slidesData = students.slides
+    // const options = students.options
 
-    const slides = slidesData.map(slide => (
-        <div>
-            <h1>{slide.headline}</h1>
-            {slide.subHeadlines.map((subHeadline, i) =>
-                <h3 key={i}>{subHeadline}</h3>
-            )}
-        </div>
-    ))
+    function getTemplate(slide) {
+        const s = useTemplate(slide);
+
+        return s;
+    }
+
+    const slides = slidesData.map(slide => {
+        const f = useTemplate(slide);
+        console.log(slide)
+        return useTemplate(slide)
+    })
 
     return (
         <div>
