@@ -1,4 +1,5 @@
 import { Templates } from "./_templates/useTemplate"
+import { SourceType } from "./hooks/useGetBackground"
 
 // In-app CMS
 const content = {
@@ -33,14 +34,14 @@ const content = {
     home: {
         slides: [
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Education beyond tomorrow.',
                 subHeadlines: [],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: './src/assets/emp-1.jpg', type: SourceType.image},
                 template: 'default',
                 headline: 'World is constantly changing and so should teaching',
                 subHeadlines: [
@@ -50,7 +51,7 @@ const content = {
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
@@ -62,7 +63,7 @@ const content = {
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'We value knowledge, in many ways.',
                 subHeadlines: [
@@ -73,7 +74,7 @@ const content = {
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'We love what we do and we do it well',
                 subHeadlines: [
@@ -91,14 +92,14 @@ const content = {
     students: {
         slides: [
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Your future is also ours,',
                 subHeadlines: ['let\'s take care of it together'],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Do you start or maybe continue?',
                 subHeadlines: [
@@ -123,7 +124,7 @@ const content = {
                 }
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'You can also jump right to faculties pages',
                 subHeadlines: ['(or read more about our vision of high education)'],
@@ -153,21 +154,21 @@ const content = {
                 }
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Knowledge by experience',
                 subHeadlines: ['check what interesting projects you can work with'],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Less is more',
                 subHeadlines: ['We have virtual first approach what means not '],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Life is already expensive, education shouldn\'t',
                 subHeadlines: [
@@ -179,7 +180,7 @@ const content = {
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'We believe education is for everyone.',
                 subHeadlines: [
@@ -190,7 +191,6 @@ const content = {
             },
         ],
         options: {
-            theme: { src: '', sourceType: Templates.default },
             navOptions: {
                 actionButton: { title: 'SaintKatID', to: '/students/login' }
             }
@@ -199,20 +199,20 @@ const content = {
     employees: {
         slides: [
             {
-                bgSource: '/assets/business1.mov',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Let your career lift off',
                 subHeadlines: [],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'If we match, we can offer you a fullfiling relationship',
                 subHeadlines: ['Maybe you do not want to marry company and we respect that however we still offer beyond competetive salary, self development, fun projects and much more!'],
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Benefits',
                 subHeadlines: [],
@@ -242,14 +242,14 @@ const content = {
                 }
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Our values',
                 subHeadlines: [],
                 options: {}
             },
             {
-                bgSource: '',
+                bgSource: {source: '/assets/business1.mov', type: SourceType.video},
                 template: 'default',
                 headline: 'Interested?',
                 subHeadlines: [],

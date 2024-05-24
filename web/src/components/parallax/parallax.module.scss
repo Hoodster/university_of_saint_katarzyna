@@ -1,3 +1,4 @@
+
 .container {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -6,6 +7,13 @@
 
 .content {
     scroll-snap-align: start;
+    z-index: 5;
     width: 100vw;
     height: 100vh;
+
+    background-image: url('../../assets/test.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

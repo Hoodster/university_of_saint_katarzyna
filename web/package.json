@@ -14,6 +14,7 @@
     "@visx/mock-data": "^3.3.0",
     "@visx/scale": "^3.5.0",
     "@visx/shape": "^3.5.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
     "granim": "2.0.0",
     "react": "^18.3.1",

@@ -7,7 +7,7 @@ function PageBase({ contentKey }) {
 
 	return (
 		<ParallaxContainer>
-			{slidesData.map((slide, i) => <ParallaxSection key={`${contentKey}-section-${++i}`} options={options} headline={slide.headline} subHeadlines={slide.subHeadlines} />)}
+			{slidesData.map((slide, i) => <ParallaxSection key={`${contentKey}-section-${++i}`} bgSource={slide.bgSource} options={options} headline={slide.headline} subHeadlines={slide.subHeadlines} />)}
 		</ParallaxContainer>
 	)
 }
