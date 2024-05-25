@@ -5,14 +5,14 @@ import { Templates } from "./templates";
  * @param {string} headline - slide main headline
  * @param {string[]} subHeadlines - (optional) slide lower importance headlines
  * @param {Object} options - (optional) additional options dependant on template
- * @param {string} template - (optional) template key @default template
+ * @param {string} template - (optional) template key @default title
  * @returns {JSX.Element} Slide component
  */
 function SlideWizard({
     headline, 
     subHeadlines = [], 
     options = {}, 
-    template='default',
+    template='title',
 }) {
     const renderSlide = () => {
         const Template = Templates[template];
