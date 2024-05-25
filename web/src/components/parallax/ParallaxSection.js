@@ -1,20 +1,16 @@
-import styles from './parallax.module.scss';
-import useGetBackground, { SourceType } from '../../hooks/useGetBackground';
-import TitleSlide from '../../_templates/TitleSlide/TitleSlide';
-import clsx from 'clsx';
+import SlideWizard from '../../_templates/slide-wizard';
+import DynamicBackground from '../dynamic-background/dynamic-background';
 
-function ParallaxSection({ bgSource, template, headline, subHeadlines, options }) {
-   // const section = useTemplate({ template, headline, subHeadlines, options });
-
-    const {source, type} = bgSource;
-   //const Background = useGetBackground('../../assets/pex.jpg', SourceType.image);
-
+function ParallaxSection({slide}) {
+    const { background, template, headline, subHeadlines, options } = slide;
     return (
-        <>
-        <div className={styles.content}>
-            <TitleSlide headline={headline} subHeadlines={subHeadlines} options={options} />
-        </div>
-        </>
+        <DynamicBackground background={background}>
+            <SlideWizard 
+            template={template} 
+            headline={headline} 
+            subHeadlines={subHeadlines} 
+            options={options} />
+        </DynamicBackground>
     )
 }
 

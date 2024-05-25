@@ -1,15 +1,10 @@
 import ParallaxContainer from "../components/parallax/ParallaxContainer";
-import ParallaxSection from "../components/parallax/ParallaxSection";
 
-function PageBase({ contentKey }) {
-	const slidesData = window.content[contentKey].slides;
-	const options = window.content[contentKey].options;
+function PageBase({contentKey}) {
+	const pageSettings = window.content[contentKey];
+	const {slides, options} = pageSettings;
 
-	return (
-		<ParallaxContainer>
-			{slidesData.map((slide, i) => <ParallaxSection key={`${contentKey}-section-${++i}`} bgSource={slide.bgSource} options={options} headline={slide.headline} subHeadlines={slide.subHeadlines} />)}
-		</ParallaxContainer>
-	)
+	return <ParallaxContainer options={options} slides={slides}/>
 }
 
 export default PageBase;

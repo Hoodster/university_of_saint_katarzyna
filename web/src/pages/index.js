@@ -1,4 +1,4 @@
-import ErrorPage from "./_error";
+import ErrorPage from "./ErrorBoundary";
 import Employees from "./employees";
 import Home from "./home";
 import Students from "./students";

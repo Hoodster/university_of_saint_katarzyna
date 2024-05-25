@@ -4,6 +4,7 @@ import Students from "../pages/students"
 import Employees from "../pages/employees"
 import Home from "../pages/home"
 import content from "../_content"
+//import ErrorBoundary from "../pages/ErrorBoundary"
 
 function useAppRouting() {
 	const [students, employees, cooperation, news] = content.root.nav
@@ -11,6 +12,7 @@ function useAppRouting() {
 		{
 			path: '/',
 			Component: Root,
+			//errorElement: ErrorBoundary,
 			children: [
 				{
 					path: '/',

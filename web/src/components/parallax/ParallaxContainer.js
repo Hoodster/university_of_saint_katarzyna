@@ -1,15 +1,16 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import styles from './parallax.module.scss';
+import ParallaxSection from './ParallaxSection';
 
-function ParallaxContainer(props) {
+function ParallaxContainer({slides, options}) {
     const ref = useRef(null)
     const [height, setHeight] = useState(0);
 
     /**
-     * Detects scroll direction by delta Y and overrides basic scroll.
+     * Detects scroll direction by delta Y and scrolls by one page.
      * @param {WheelEvent} e 
      */
-    const handleScrollEvent = (e) => {
+    const handleScrollEvent = useCallback((e) => {
         e.preventDefault();
 
         if (e.deltaY > 0) { // up
@@ -19,11 +20,11 @@ function ParallaxContainer(props) {
         if (e.deltaY < 0) {
             window.scrollBy({top: -height, behavior: 'smooth'})
         }
-    }
+    }, [height])
 
     useEffect(() => {
         const container = ref.current;
-        setHeight(container.clientHeight/props.children.length);
+        setHeight(window.innerHeight);
 
         if (container) {
             container.addEventListener('wheel', handleScrollEvent);
@@ -32,12 +33,12 @@ function ParallaxContainer(props) {
         return () => {
             container.removeEventListener('wheel', handleScrollEvent);
         }
-    })
+    }, [handleScrollEvent])
 
 
     return (
     <div className={styles.container} ref={ref}>
-        {props.children}
+        {slides.map((slide, index) => (<ParallaxSection key={index} slide={slide}/>))}
     </div>
     )};
 
