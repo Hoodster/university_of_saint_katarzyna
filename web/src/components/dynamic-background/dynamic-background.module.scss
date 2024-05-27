@@ -4,7 +4,7 @@
     height: 100%;
     overflow: hidden;
 
-    .gradient {
+    @mixin background-base {
         position: absolute;
         top: 0;
         left: 0;
@@ -13,13 +13,17 @@
         z-index: -1;
     }
 
+    .gradient {
+        @include background-base;
+    }
+
     .video {
-        @extend .gradient;
+        @include background-base;
         object-fit: cover;
     }
     
     .image {
-        @extend .gradient;
+        @include background-base;
         background-position: center;
     }
 

@@ -1,19 +1,14 @@
-import { Button } from "@chakra-ui/react"
-import styles from './SlideBase.module.scss'
-import useGetBackground, { SourceType } from "../../hooks/useGetBackground"
+import styles from './SlideBase.module.scss';
 
-function SlideBase({ bgSource, headline, subHeadlines, options }) {
-    const Background = useGetBackground(bgSource, SourceType.video)
+function SlideBase({ headline, subHeadlines, options }) {
     return (
-        <div key={options.key} className={styles.slide}>
-            <Background />
-            <h1>{headline}</h1>
-            {subHeadlines.map(sub => <h2>{sub}</h2>)}
-            {options.actionButtons
-                ? options.actionButtons.map(button =>
-                    <Button key={button.name} title={button.name} onClick={() => alert('click')} />
-                )
-                : <></>}
+        <div className={styles.container}>
+            <div className={styles.headline}>
+                <h1 className={headline}>{headline}</h1>
+            </div>
+            <div className={styles.subheadlines}>
+                {subHeadlines.map((hline, index) => <h2 key={`st-headline-${index}`}>{hline}</h2>)}
+            </div>
         </div>
     )
 }

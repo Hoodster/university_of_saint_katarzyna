@@ -25,11 +25,13 @@ function DynamicBackground({children, background}) {
     }, [background.src, background.sourceType]);
 
     const renderBackground = () => {
+        const source = require(`../../assets/${background.src}`)
         switch (background.sourceType) {
             case SourceType.video:
+               
                 return (
-                    <video autoPlay loop muted className={styles.video}>
-                        <src src={background.src} type='video/mp4' />
+                    <video src={source} autoPlay loop muted className={styles.video}>
+                        
                     </video>
                 );
             case SourceType.gradient:
@@ -37,9 +39,9 @@ function DynamicBackground({children, background}) {
                     <canvas ref={canvasRef} className={styles.gradient}/>
                 );
             case SourceType.image:
-                return <div className={styles.image} style={{backgroundImage: `url$(${background.src})`}} />;
+                return <div className={styles.image} style={{backgroundImage: {source}}} />;
             default:
-                return null;
+                return <div>fail</div>;
         }
     }
 

@@ -1,5 +1,5 @@
 import { Templates } from "./_templates/templates"
-import { SourceType } from "./hooks/useGetBackground"
+import { SourceType } from "./components/dynamic-background/dynamic-background"
 
 // In-app CMS
 const content = {
@@ -34,13 +34,13 @@ const content = {
     home: {
         slides: [
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
                 template: 'title',
-                headline: 'Education beyond tomorrow.',
+                headline: 'Kocham mojego brata',
             },
             {
-                background: {src: './src/assets/emp-1.jpg', sourceType: SourceType.image},
-                template: 'title',
+                background: {src: 'test.jpg', sourceType: SourceType.image},
+                template: 'default',
                 headline: 'World is constantly changing and so should teaching',
                 subHeadlines: [
                     'At Saint Katherine\'s we reduced beraucracy to minimum,',
@@ -48,8 +48,8 @@ const content = {
                 ],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
                     'Life changing place like college should be restructured to meet young people expectations.',
@@ -59,8 +59,8 @@ const content = {
                 ],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'We value knowledge, in many ways.',
                 subHeadlines: [
                     'University is like any other organization and we are still looking for the best in their area.',
@@ -69,13 +69,22 @@ const content = {
                 ],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'We love what we do and we do it well',
                 subHeadlines: [
                     'That\'s why we aren\'t scared of bussiness challenges (we are private university after all).',
                     'We can offer our expertise in wide range of areas in our narrow but deeply understood fields.',
                     `See business site ->`
+                ],
+            },
+            {
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
+                headline: 'Kurwa ale buja',
+                subHeadlines: [
+                    'Sekcja napisana przez',
+                    'Maciej Gang'
                 ],
             },
         ],
@@ -86,14 +95,14 @@ const content = {
     students: {
         slides: [
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
                 template: 'title',
                 headline: 'Your future is also ours,',
                 subHeadlines: ['let\'s take care of it together'],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Do you start or maybe continue?',
                 subHeadlines: [
                     'We offer possibiity of graduation from bachelor up to PhD.',
@@ -117,29 +126,29 @@ const content = {
                 }
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'You can also jump right to faculties pages',
                 subHeadlines: ['(or read more about our vision of high education)'],
                 options: {
                     faculties: [
                         {
-                            title: 'Computer Science',
+                            default: 'Computer Science',
                             url: '/faculty/ComputerScience',
                             logoSource: ''
                         },
                         {
-                            title: 'Architecture',
+                            default: 'Architecture',
                             url: '/faculty/Architecture',
                             logoSource: ''
                         },
                         {
-                            title: 'Design',
+                            default: 'Design',
                             url: '/faculty/Design',
                             logoSource: ''
                         },
                         {
-                            title: 'Mechanics',
+                            default: 'Mechanics',
                             url: '/faculty/Mechanics',
                             logoSource: ''
                         }
@@ -147,20 +156,20 @@ const content = {
                 }
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Knowledge by experience',
                 subHeadlines: ['check what interesting projects you can work with'],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Less is more',
                 subHeadlines: ['We have virtual first approach what means not '],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Life is already expensive, education shouldn\'t',
                 subHeadlines: [
                     'University of Saint Katherine was designed to divide it\'s income source.',
@@ -170,8 +179,8 @@ const content = {
                 ],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'We believe education is for everyone.',
                 subHeadlines: [
                     'Even though you struggle we offer many scholarship options as well.',
@@ -181,26 +190,26 @@ const content = {
         ],
         options: {
             navOptions: {
-                actionButton: { title: 'SaintKatID', to: '/students/login' }
+                actionButton: { default: 'SaintKatID', to: '/students/login' }
             }
         }
     },
     employees: {
         slides: [
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
                 template: 'title',
                 headline: 'Let your career lift off',
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'If we match, we can offer you a fullfiling relationship',
                 subHeadlines: ['Maybe you do not want to marry company and we respect that however we still offer beyond competetive salary, self development, fun projects and much more!'],
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Benefits',
                 options: {
                     benefits: [
@@ -228,15 +237,15 @@ const content = {
                 }
             },
             {
-                background: {src: '/assets/business1.mov', sourceType: SourceType.video},
-                template: 'title',
+                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                template: 'default',
                 headline: 'Our values',
             },
         ],
         options: {
             theme: { src: '', sourceType: Templates.default },
             navOptions: {
-                actionButton: { title: 'SaintKatID', to: '/students/login' }
+                actionButton: { default: 'SaintKatID', to: '/students/login' }
             }
         }
     },
