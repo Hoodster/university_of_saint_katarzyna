@@ -36,7 +36,7 @@ const content = {
             {
                 background: { src: 'home-main.mp4', sourceType: SourceType.video },
                 template: 'title',
-                headline: 'Kocham mojego brata',
+                headline: 'University beyond tomorrow',
             },
             {
                 background: { src: 'business2.jpg', sourceType: SourceType.image },
@@ -95,7 +95,7 @@ const content = {
     students: {
         slides: [
             {
-                background: { src: "business1.mp4", sourceType: SourceType.video },
+                background: { src: "students-campus.mp4", sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Your future is also ours,',
                 subHeadlines: ['let\'s take care of it together'],

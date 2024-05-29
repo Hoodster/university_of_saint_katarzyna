@@ -36,7 +36,6 @@ function DynamicBackground({ children, background }) {
                 return (
                     <canvas ref={canvasRef} className={styles.gradient} />
                 );
-            case SourceType.url:
             case SourceType.image:
                 return <div className={styles.image} style={{ backgroundImage: `url(${source})` }} />;
             default:
@@ -47,6 +46,7 @@ function DynamicBackground({ children, background }) {
     return (
         <div className={styles.container}>
             {renderBackground()}
+            <div className={styles.filter} />
             <div className={styles.content}>{children}</div>
         </div>
     );
