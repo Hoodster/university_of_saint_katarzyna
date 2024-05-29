@@ -6,6 +6,7 @@
 
     @mixin background-base {
         position: absolute;
+        box-shadow: inset 0 0 100px #000;
         top: 0;
         left: 0;
         width: 100%;

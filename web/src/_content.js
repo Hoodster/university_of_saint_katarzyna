@@ -34,12 +34,12 @@ const content = {
     home: {
         slides: [
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: { src: 'home-main.mp4', sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Kocham mojego brata',
             },
             {
-                background: { src: 'test.jpg', sourceType: SourceType.image },
+                background: { src: 'business2.jpg', sourceType: SourceType.image },
                 template: 'default',
                 headline: 'World is constantly changing and so should teaching',
                 subHeadlines: [
