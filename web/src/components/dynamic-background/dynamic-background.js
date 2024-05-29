@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import styles from './dynamic-background.module.scss'
 import Granim from 'granim';
+import { isValidHTTPUrl } from '../../utils/url';
 
-const SourceType = Object.freeze({video:'vid',gradient:'gradient',image:'img'});
- 
-function DynamicBackground({children, background}) {
-    console.log(background)
+const SourceType = Object.freeze({ video: 'vid', gradient: 'gradient', image: 'img' });
+
+function DynamicBackground({ children, background }) {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -25,21 +25,20 @@ function DynamicBackground({children, background}) {
     }, [background.src, background.sourceType]);
 
     const renderBackground = () => {
-        const source = require(`../../assets/${background.src}`)
+        const source = isValidHTTPUrl(background.src) ? background.src : require(`../../assets/${background.src}`)
+
         switch (background.sourceType) {
             case SourceType.video:
-               
                 return (
-                    <video src={source} autoPlay loop muted className={styles.video}>
-                        
-                    </video>
+                    <video src={source} autoPlay loop muted className={styles.video} />
                 );
             case SourceType.gradient:
                 return (
-                    <canvas ref={canvasRef} className={styles.gradient}/>
+                    <canvas ref={canvasRef} className={styles.gradient} />
                 );
+            case SourceType.url:
             case SourceType.image:
-                return <div className={styles.image} style={{backgroundImage: {source}}} />;
+                return <div className={styles.image} style={{ backgroundImage: `url(${source})` }} />;
             default:
                 return <div>fail</div>;
         }

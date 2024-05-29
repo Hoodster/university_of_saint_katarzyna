@@ -34,12 +34,12 @@ const content = {
     home: {
         slides: [
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Kocham mojego brata',
             },
             {
-                background: {src: 'test.jpg', sourceType: SourceType.image},
+                background: { src: 'test.jpg', sourceType: SourceType.image },
                 template: 'default',
                 headline: 'World is constantly changing and so should teaching',
                 subHeadlines: [
@@ -48,7 +48,7 @@ const content = {
                 ],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
@@ -59,7 +59,7 @@ const content = {
                 ],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'We value knowledge, in many ways.',
                 subHeadlines: [
@@ -69,7 +69,7 @@ const content = {
                 ],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'We love what we do and we do it well',
                 subHeadlines: [
@@ -79,7 +79,7 @@ const content = {
                 ],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Kurwa ale buja',
                 subHeadlines: [
@@ -95,13 +95,13 @@ const content = {
     students: {
         slides: [
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: "business1.mp4", sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Your future is also ours,',
                 subHeadlines: ['let\'s take care of it together'],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business2.jpg', sourceType: SourceType.image },
                 template: 'default',
                 headline: 'Do you start or maybe continue?',
                 subHeadlines: [
@@ -126,7 +126,7 @@ const content = {
                 }
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business3.jpg', sourceType: SourceType.image },
                 template: 'default',
                 headline: 'You can also jump right to faculties pages',
                 subHeadlines: ['(or read more about our vision of high education)'],
@@ -156,19 +156,19 @@ const content = {
                 }
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Knowledge by experience',
                 subHeadlines: ['check what interesting projects you can work with'],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Less is more',
                 subHeadlines: ['We have virtual first approach what means not '],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Life is already expensive, education shouldn\'t',
                 subHeadlines: [
@@ -179,7 +179,7 @@ const content = {
                 ],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'We believe education is for everyone.',
                 subHeadlines: [
@@ -197,18 +197,18 @@ const content = {
     employees: {
         slides: [
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Let your career lift off',
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'If we match, we can offer you a fullfiling relationship',
                 subHeadlines: ['Maybe you do not want to marry company and we respect that however we still offer beyond competetive salary, self development, fun projects and much more!'],
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Benefits',
                 options: {
@@ -237,7 +237,7 @@ const content = {
                 }
             },
             {
-                background: {src: 'business1.mp4', sourceType: SourceType.video},
+                background: { src: 'business1.mp4', sourceType: SourceType.video },
                 template: 'default',
                 headline: 'Our values',
             },

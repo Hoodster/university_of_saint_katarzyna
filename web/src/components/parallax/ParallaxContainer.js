@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import styles from './parallax.module.scss';
 import ParallaxSection from './ParallaxSection';
 
-function ParallaxContainer({slides, options}) {
+function ParallaxContainer({ slides, options }) {
     const ref = useRef(null)
     const [height, setHeight] = useState(0);
 
@@ -14,11 +14,11 @@ function ParallaxContainer({slides, options}) {
         e.preventDefault();
 
         if (e.deltaY > 0) { // up
-            window.scrollBy({top: height, behavior: 'smooth'})
+            window.scrollBy({ top: height, behavior: 'smooth' })
         }
 
         if (e.deltaY < 0) {
-            window.scrollBy({top: -height, behavior: 'smooth'})
+            window.scrollBy({ top: -height, behavior: 'smooth' })
         }
     }, [height])
 
@@ -37,9 +37,10 @@ function ParallaxContainer({slides, options}) {
 
 
     return (
-    <div className={styles.container} ref={ref}>
-        {slides.map((slide, index) => (<ParallaxSection key={index} slide={slide}/>))}
-    </div>
-    )};
+        <div className={styles.container} ref={ref}>
+            {slides.map((slide, index) => (<ParallaxSection key={index} slide={slide} />))}
+        </div>
+    )
+};
 
 export default ParallaxContainer
