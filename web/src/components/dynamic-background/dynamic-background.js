@@ -1,4 +1,4 @@
-import { lazy, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './dynamic-background.module.scss'
 import Granim from 'granim';
 import { isValidHTTPUrl } from '../../utils/url';

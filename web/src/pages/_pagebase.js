@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import ParallaxContainer from "../components/parallax/ParallaxContainer";
 
-function PageBase({contentKey}) {
+function PageBase({ contentKey }) {
 	const pageSettings = window.content[contentKey];
-	const {slides, options} = pageSettings;
+	const { slides, options } = pageSettings;
 
-	return <ParallaxContainer options={options} slides={slides}/>
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	})
+
+	return <ParallaxContainer options={options} slides={slides} />
 }
 
 export default PageBase;

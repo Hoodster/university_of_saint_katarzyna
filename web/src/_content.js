@@ -1,6 +1,16 @@
 import { Templates } from "./_templates/templates"
 import { SourceType } from "./components/dynamic-background/dynamic-background"
 
+const placeholderBackground = {
+    src: [
+        ['#41295a', '#2F0743'],
+        ['#1a2a6c', '#b21f1f'],
+        ['#fdbb2d', '#3A1C71'],
+        ['#D76D77', '#fdbb2d']
+    ],
+    sourceType: SourceType.gradient
+}
+
 // In-app CMS
 const content = {
     logoSrc: '',
@@ -39,7 +49,7 @@ const content = {
                 headline: 'University beyond tomorrow',
             },
             {
-                background: { src: 'business2.jpg', sourceType: SourceType.image },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'World is constantly changing and so should teaching',
                 subHeadlines: [
@@ -48,7 +58,7 @@ const content = {
                 ],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
@@ -59,7 +69,7 @@ const content = {
                 ],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'We value knowledge, in many ways.',
                 subHeadlines: [
@@ -69,22 +79,13 @@ const content = {
                 ],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'We love what we do and we do it well',
                 subHeadlines: [
                     'That\'s why we aren\'t scared of bussiness challenges (we are private university after all).',
                     'We can offer our expertise in wide range of areas in our narrow but deeply understood fields.',
                     `See business site ->`
-                ],
-            },
-            {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
-                template: 'default',
-                headline: 'Kurwa ale buja',
-                subHeadlines: [
-                    'Sekcja napisana przez',
-                    'Maciej Gang'
                 ],
             },
         ],
@@ -173,13 +174,13 @@ const content = {
                 subHeadlines: ['check what interesting projects you can work with'],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'Less is more',
                 subHeadlines: ['We have virtual first approach what means not '],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'Life is already expensive, education shouldn\'t',
                 subHeadlines: [
@@ -208,18 +209,18 @@ const content = {
     employees: {
         slides: [
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: { src: 'employees-main.mp4', sourceType: SourceType.video },
                 template: 'title',
                 headline: 'Let your career lift off',
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'If we match, we can offer you a fullfiling relationship',
                 subHeadlines: ['Maybe you do not want to marry company and we respect that however we still offer beyond competetive salary, self development, fun projects and much more!'],
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'Benefits',
                 options: {
@@ -248,7 +249,7 @@ const content = {
                 }
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: placeholderBackground,
                 template: 'default',
                 headline: 'Our values',
             },
@@ -262,7 +263,11 @@ const content = {
     },
     business: {
         slides: [
-
+            {
+                background: placeholderBackground,
+                template: 'default',
+                headline: 'Empty :(('
+            }
         ],
         options: {
 
@@ -270,7 +275,11 @@ const content = {
     },
     news: {
         slides: [
-
+            {
+                background: placeholderBackground,
+                template: 'default',
+                headline: 'Empty :(('
+            }
         ],
         options: {
 

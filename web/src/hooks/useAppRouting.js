@@ -4,6 +4,8 @@ import Students from "../pages/students"
 import Employees from "../pages/employees"
 import Home from "../pages/home"
 import content from "../_content"
+import Business from "../pages/business"
+import News from '../pages/news'
 //import ErrorBoundary from "../pages/ErrorBoundary"
 
 function useAppRouting() {
@@ -16,7 +18,7 @@ function useAppRouting() {
 			children: [
 				{
 					path: '/',
-					element: <Home name={'Home'} />
+					element: <Home />
 				},
 				{
 					path: students.destination,
@@ -24,15 +26,15 @@ function useAppRouting() {
 				},
 				{
 					path: employees.destination,
-					element: <Employees name={employees.name} />
+					element: <Employees />
 				},
 				{
 					path: cooperation.destination,
-					element: <p />
+					element: <Business />
 				},
 				{
 					path: news.destination,
-					element: <p />
+					element: <News />
 				}
 			]
 		}
