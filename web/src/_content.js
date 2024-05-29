@@ -101,7 +101,13 @@ const content = {
                 subHeadlines: ['let\'s take care of it together'],
             },
             {
-                background: { src: 'business2.jpg', sourceType: SourceType.image },
+                background: {
+                    src: [
+                        ['#6ec3f4', '#3a3aff'],
+                        ['#ff61ab', '#E63946']
+                    ],
+                    sourceType: SourceType.gradient
+                },
                 template: 'default',
                 headline: 'Do you start or maybe continue?',
                 subHeadlines: [
@@ -156,7 +162,12 @@ const content = {
                 }
             },
             {
-                background: { src: 'business1.mp4', sourceType: SourceType.video },
+                background: {
+                    src: [
+                        ['#159957', '#34e89e'],
+                        ['#0f3443', '#155799']
+                    ], sourceType: SourceType.gradient
+                },
                 template: 'default',
                 headline: 'Knowledge by experience',
                 subHeadlines: ['check what interesting projects you can work with'],
