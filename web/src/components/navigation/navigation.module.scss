@@ -16,7 +16,7 @@ nav {
     }
 
     a {
-        color: white;
+        color: rgba($color: #fff, $alpha: .8);
         stroke: 5px black;
         font-variant: all-small-caps;
         padding: 5px 8px;
@@ -25,5 +25,9 @@ nav {
         font-stretch: semi-expanded;
         padding: 10px 0;
         align-self: center;
+
+        &:hover {
+            color: rgba($color: #fff, $alpha: 1.0);
+        }
     }
 }

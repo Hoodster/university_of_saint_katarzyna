@@ -4,6 +4,7 @@
     display: grid;
     grid-column: auto;
     text-align: center;
+    user-select: none;
     grid-template-rows: 30% 20% 20% 30%;
     grid-template-columns: auto aut;
     grid-template-areas: 
