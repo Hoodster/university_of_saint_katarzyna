@@ -16,7 +16,6 @@ function SlideWizard({
 }) {
     const renderSlide = () => {
         const Template = Templates[template];
-        console.log(Template)
         return <Template headline={headline} subHeadlines={subHeadlines} options={options}/>
     }
 

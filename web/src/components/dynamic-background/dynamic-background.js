@@ -31,6 +31,7 @@ function DynamicBackground({ children, background }) {
         switch (background.sourceType) {
             case SourceType.video: {
                 const path = mappedPath(background.src);
+                console.log(path)
                 return <video src={path} autoPlay loop muted className={styles.video} />;
             }
             case SourceType.stripe:
@@ -38,8 +39,7 @@ function DynamicBackground({ children, background }) {
             case SourceType.gradient:
                 return <canvas ref={canvasRef} className={styles.gradient} />;
             case SourceType.image: {
-                const path = mappedPath(background.src);
-                return <div className={styles.image} style={{ backgroundImage: `url(${path})` }} />;
+                return <div className={styles.image} style={{ backgroundImage: `url(${mappedPath(background.src)})` }} />;
             }
             default:
                 return <div>fail</div>;

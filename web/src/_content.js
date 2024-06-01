@@ -71,8 +71,7 @@ const content = {
                 template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
-                    'Life changing place like college should be restructured to meet young people expectations.',
-                    'We know it the best as we came through same issues that we want to eliminate',
+                    'World has changed and so needs.',
                     'Elastic hours? Project you want to deeply study? No money to move into the city?',
                     'We think we got you covered, look at our student page!'
                 ],
@@ -94,7 +93,6 @@ const content = {
                 subHeadlines: [
                     'That\'s why we aren\'t scared of bussiness challenges (we are private university after all).',
                     'We can offer our expertise in wide range of areas in our narrow but deeply understood fields.',
-                    `See business site ->`
                 ],
             },
         ],
@@ -107,8 +105,7 @@ const content = {
             {
                 background: { src: "students-campus.mp4", sourceType: SourceType.video },
                 template: 'title',
-                headline: 'Your future is also ours,',
-                subHeadlines: ['let\'s take care of it together'],
+                headline: 'Your future is also ours.',
             },
             {
                 background: {
@@ -121,7 +118,6 @@ const content = {
                 template: 'action',
                 headline: 'Taking care of your skills. At any level.',
                 subHeadlines: [
-                    'We offer possibiity of graduation from bachelor up to PhD.',
                     'Just for 799PLN/semester.'
                 ],
                 options: {
@@ -142,35 +138,6 @@ const content = {
                 }
             },
             {
-                background: { src: 'business3.jpg', sourceType: SourceType.image },
-                template: 'default',
-                headline: 'You can also jump right to faculties pages.',
-                options: {
-                    faculties: [
-                        {
-                            default: 'Computer Science',
-                            url: '/faculty/ComputerScience',
-                            logoSource: ''
-                        },
-                        {
-                            default: 'Architecture',
-                            url: '/faculty/Architecture',
-                            logoSource: ''
-                        },
-                        {
-                            default: 'Design',
-                            url: '/faculty/Design',
-                            logoSource: ''
-                        },
-                        {
-                            default: 'Mechanics',
-                            url: '/faculty/Mechanics',
-                            logoSource: ''
-                        }
-                    ]
-                }
-            },
-            {
                 background: {
                     src: [
                         ['#159957', '#34e89e'],
@@ -180,12 +147,6 @@ const content = {
                 template: 'default',
                 headline: 'Knowledge by experience',
                 subHeadlines: ['check what interesting projects you can work with'],
-            },
-            {
-                background: placeholderBackground,
-                template: 'default',
-                headline: 'Less is more',
-                subHeadlines: ['We have virtual first approach what means not '],
             },
             {
                 background: placeholderBackground,
@@ -221,8 +182,8 @@ const content = {
             {
                 background: placeholderBackground,
                 template: 'default',
-                headline: 'If we match, we can offer you a fullfiling relationship',
-                subHeadlines: ['Maybe you do not want to marry company and we respect that however we still offer beyond competetive salary, self development, fun projects and much more!'],
+                headline: 'Jolly cooperation',
+                subHeadlines: ['We offer beyond competetive salary, self development, fun projects and much more!'],
             },
             {
                 background: placeholderBackground,
