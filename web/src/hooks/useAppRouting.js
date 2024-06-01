@@ -6,7 +6,7 @@ import Home from "../pages/home"
 import content from "../_content"
 import Business from "../pages/business"
 import News from '../pages/news'
-//import ErrorBoundary from "../pages/ErrorBoundary"
+import ErrorBoundary from "../pages/error/error"
 
 function useAppRouting() {
 	const [students, employees, cooperation, news] = content.root.nav
@@ -14,7 +14,7 @@ function useAppRouting() {
 		{
 			path: '/',
 			Component: Root,
-			//errorElement: ErrorBoundary,
+			errorElement: <ErrorBoundary/>,
 			children: [
 				{
 					path: '/',

@@ -1,4 +1,3 @@
-import { Templates } from "./_templates/templates"
 import { SourceType } from "./components/dynamic-background/dynamic-background"
 
 const placeholderBackground = {
@@ -14,6 +13,17 @@ const placeholderBackground = {
 // In-app CMS
 const content = {
     logoSrc: '',
+    error: {
+        
+        slides: [
+            {
+                template: 'error',
+                background: {src: '/error-page.mp4', sourceType: SourceType.video},
+                headline: '404',
+                subHeadlines: ['This page exists only theoretically.']
+            }
+        ]
+    },
     root: {
         nav: [
             {
@@ -109,24 +119,24 @@ const content = {
                     ],
                     sourceType: SourceType.gradient
                 },
-                template: 'default',
-                headline: 'Do you start or maybe continue?',
+                template: 'action',
+                headline: 'Taking care of your skills. At any level.',
                 subHeadlines: [
                     'We offer possibiity of graduation from bachelor up to PhD.',
                     'Just for 799PLN/semester.'
                 ],
                 options: {
-                    eduLevels: [
+                    actionButtons: [
                         {
-                            level: 'bachelor',
+                            name: 'bachelor',
                             url: '/candidates/search#bachelor'
                         },
                         {
-                            level: 'master',
+                            name: 'master',
                             url: '/candidates/search#master'
                         },
                         {
-                            level: 'phd',
+                            name: 'phd',
                             url: '/candidates/search#phd'
                         }
                     ]
@@ -135,8 +145,7 @@ const content = {
             {
                 background: { src: 'business3.jpg', sourceType: SourceType.image },
                 template: 'default',
-                headline: 'You can also jump right to faculties pages',
-                subHeadlines: ['(or read more about our vision of high education)'],
+                headline: 'You can also jump right to faculties pages.',
                 options: {
                     faculties: [
                         {
@@ -201,9 +210,6 @@ const content = {
             },
         ],
         options: {
-            navOptions: {
-                actionButton: { default: 'SaintKatID', to: '/students/login' }
-            }
         }
     },
     employees: {
@@ -255,10 +261,6 @@ const content = {
             },
         ],
         options: {
-            theme: { src: '', sourceType: Templates.default },
-            navOptions: {
-                actionButton: { default: 'SaintKatID', to: '/students/login' }
-            }
         }
     },
     business: {

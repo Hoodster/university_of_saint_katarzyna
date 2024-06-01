@@ -3,22 +3,46 @@
 @include init-template();
 
 .container {
-	grid-template-columns: repeat(5, auto);
-	grid-template-rows: repeat(7, auto);
+	height: 100vh;
+	grid-template-columns: 20% auto 20%;
 	grid-template-areas: 
-	". . . . .",
-	". headline . . .",
-	". subHeadlines subHeadlines . .",
-	". . . . .",
-	". action  action action .",
-	". . . . .",
-	". . . . .";
+	". headline ."
+	". action ."
+	". subheadlines .";
 
-	h1 {
-		grid-area: headline;
+	> * {
+		place-content: center;
+		justify-content: center;
 	}
 
-	h2 {
-		grid-area: subHeadlines;
+	.headline {
+		grid-area: headline;
+		text-align: center;
+	}
+
+	.subheadlines {
+		grid-area: subheadlines;
+	}
+
+	.action {
+		grid-area: action;
+		display: flex;
+		justify-content: space-around;
+		font-size: 40px;
+		align-items: center;
+		font-weight: 500;
+		color: white;
+
+		& a {
+			&:hover {
+				animation: optionHover 2s ease-in;
+				animation-direction: reverse;
+				@keyframes optionHover {
+					0%{background-color: #54524f;}
+					50%{border-color: white; border-width: 1px;}
+					100%{border-color: rgba($color: #fff, $alpha: .6); border-width: .5px;}
+				}
+			}
+		}
 	}
 }
