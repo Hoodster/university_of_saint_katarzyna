@@ -14,11 +14,10 @@ const placeholderBackground = {
 const content = {
     logoSrc: '',
     error: {
-        
         slides: [
             {
                 template: 'error',
-                background: {src: '/error-page.mp4', sourceType: SourceType.video},
+                background: {src: 'error-page.mp4', sourceType: SourceType.video},
                 headline: '404',
                 subHeadlines: ['This page exists only theoretically.']
             }
