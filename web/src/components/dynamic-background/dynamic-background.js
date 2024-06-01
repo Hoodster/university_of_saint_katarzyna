@@ -25,13 +25,12 @@ function DynamicBackground({ children, background }) {
         }
     }, [background.src, background.sourceType]);
 
-    const mappedPath = (src) => isValidHTTPUrl(src) ? src : `${process.env.PUBLIC_URL}/assets/${src}`;
+    const mappedPath = (src) => isValidHTTPUrl(src) ? src : `/assets/${src}`;
 
     const renderBackground = () => {
         switch (background.sourceType) {
             case SourceType.video: {
                 const path = mappedPath(background.src);
-                console.log(path)
                 return <video src={path} autoPlay loop muted className={styles.video} />;
             }
             case SourceType.stripe:
