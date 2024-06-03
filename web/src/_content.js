@@ -1,3 +1,4 @@
+import articles from "./_articles"
 import { SourceType } from "./components/dynamic-background/dynamic-background"
 
 const placeholderBackground = {
@@ -12,7 +13,6 @@ const placeholderBackground = {
 
 // In-app CMS
 const content = {
-    logoSrc: '',
     error: {
         slides: [
             {
@@ -182,12 +182,6 @@ const content = {
             {
                 background: placeholderBackground,
                 template: 'default',
-                headline: 'Jolly cooperation',
-                subHeadlines: ['We offer beyond competetive salary, self development, fun projects and much more!'],
-            },
-            {
-                background: placeholderBackground,
-                template: 'default',
                 headline: 'Benefits',
                 options: {
                     benefits: [
@@ -217,11 +211,10 @@ const content = {
             {
                 background: placeholderBackground,
                 template: 'default',
-                headline: 'Our values',
+                headline: 'Jolly cooperation',
+                subHeadlines: ['We offer beyond competetive salary, self development, fun projects and much more!'],
             },
         ],
-        options: {
-        }
     },
     business: {
         slides: [
@@ -238,16 +231,20 @@ const content = {
     news: {
         slides: [
             {
-                background: placeholderBackground,
-                template: 'default',
-                headline: 'Empty :(('
+                background: {
+                    src: [
+                    ['#ffecd2', '#fcb69f'],
+                    ['#fdfcfb', '#e2d1c3']],
+                    sourceType: SourceType.gradient
+                },
+                template: 'news',
+                headline: 'University News',
+                options: {
+                    articles
+                }
             }
-        ],
-        options: {
-
-        }
+        ]
     }
 }
-
 
 export default content
