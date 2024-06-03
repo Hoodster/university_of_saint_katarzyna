@@ -1,5 +1,6 @@
 import { Button, Collapse } from '@chakra-ui/react'
 import { useState } from 'react';
+import styles from './blog.module.scss'
 
 function Article({title, paragraphs, author, creationDate}) {
     const [expand, setExpand] = useState(false);
@@ -7,21 +8,25 @@ function Article({title, paragraphs, author, creationDate}) {
     const changeExpand = () => setExpand(!expand);
 
     return (
-        <div onClick={changeExpand}>
+        <div className={styles.article} onClick={changeExpand}>
             <h2>{title}</h2>
-            <div>
+            <div className={styles.info}>
                 <div>
-                <span style={{fontWeight:'700'}}>Author: </span>
-                <span>{author}</span>
+                    <span>Author: </span>
+                    <span>{author}</span>
                 </div>
-                <span>{creationDate}</span>
+                <div>
+                    <span>Date: </span>
+                    <span>{creationDate}</span>
+                </div>
             </div>
+
             <Collapse style={{display: 'flex', flexDirection: 'column'}} startingHeight={30} in={expand}>
                 {paragraphs.map(element => (
                     <p>{element}</p>
                 ))}
             </Collapse>
-            <Button>read {expand ? 'more' : 'less'}</Button>
+            <Button colorScheme='orange' variant='ghost'>read {expand ? 'less' : 'more'}</Button>
         </div>
     );
 }
