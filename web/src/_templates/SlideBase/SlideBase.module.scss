@@ -1,0 +1,22 @@
+@import '../_styles/templates.scss';
+
+.container {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	". . . . ."
+	'. . . . .'
+	". hline hline . ."
+	". . . . .";
+}
+
+.headline {
+	grid-area: hline;
+}
+
+.subheadlines {
+	grid-area: shline;
+}

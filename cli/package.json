@@ -1,0 +1,21 @@
+{
+  "name": "mycli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "keywords": [
+    "mycli"
+  ],
+  "bin": {
+    "mycli": "./bin/index.js"
+  },
+  "dependencies": {
+    "inquirer": "9.2.22",
+    "yargs": "17.7.2"
+  }
+}

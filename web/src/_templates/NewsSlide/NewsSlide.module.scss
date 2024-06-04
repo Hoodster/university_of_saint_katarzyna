@@ -1,0 +1,24 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    padding: 30px 0;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto 80% 5%;
+    grid-template-areas: 
+    ". . ."
+    ". blog ."
+    ". . .";
+    
+    .blog {
+        grid-area: blog;
+        border-radius: 30px;
+        padding: 15px;
+        overflow-y: scroll;
+        border-radius: 15px;
+    }
+
+    h1, h2, span, p {
+        color: black;
+    }
+}

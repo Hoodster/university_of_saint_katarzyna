@@ -1,17 +1,16 @@
-import styles from 'parallax.module.scss'
-import getTemplate from '../../templates/templateService'
+import SlideWizard from '../../_templates/slide-wizard';
+import DynamicBackground from '../dynamic-background/dynamic-background';
 
-function ParallaxSection(slideData) {
-    const {bgSource, headline, subHeadlines, options} = slideData
-
+function ParallaxSection({slide}) {
+    const { background, template, headline, subHeadlines, options } = slide;
     return (
-        <div k>
-            <video autoPlay muted loop id={styles.background}>
-                <source src={bgSource} type='video/mp4'/>
-            </video>
-
-            <div className={styles.content}>{getTemplate(headline, subHeadlines, options)}</div>
-        </div>
+        <DynamicBackground background={background}>
+            <SlideWizard 
+            template={template} 
+            headline={headline} 
+            subHeadlines={subHeadlines} 
+            options={options} />
+        </DynamicBackground>
     )
 }
 

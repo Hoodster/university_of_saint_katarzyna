@@ -1,0 +1,29 @@
+.container {
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-column: auto;
+    text-align: center;
+    user-select: none;
+    grid-template-rows: 30% 20% 20% 30%;
+    grid-template-columns: auto aut;
+    grid-template-areas: 
+    ". ."
+    ". headline"
+    ". subheadlines"
+    ". .";
+    
+
+    .headline {
+        grid-area: headline;
+        font-weight: bold;
+        font-size: 70pt;
+    }
+
+    .subheadlines {
+        grid-area: subheadlines;
+        font-weight: 500;
+        font-size: 30pt;
+    }
+}
+
