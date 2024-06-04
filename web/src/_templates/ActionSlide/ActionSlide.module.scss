@@ -1,0 +1,53 @@
+@import '../_styles/utils.scss';
+
+@include init-template();
+
+.container {
+	height: 100vh;
+	grid-template-columns: 20% auto 20%;
+	grid-template-areas: 
+	". headline ."
+	". action ."
+	". subheadlines .";
+
+	> * {
+		place-content: center;
+		justify-content: center;
+	}
+
+	.headline {
+		grid-area: headline;
+		text-align: center;
+	}
+
+	.subheadlines {
+		grid-area: subheadlines;
+	}
+
+	.action {
+		grid-area: action;
+		display: flex;
+		justify-content: space-around;
+		font-size: 40px;
+		align-items: center;
+		font-weight: 500;
+		color: white;
+
+		& a {
+			border-radius: 1000px;
+			
+
+			&:hover {
+				animation: optionHover 5s ease-in-out infinite;
+				animation-direction: alternate;
+				padding: 0 2px;
+				border-width: 2px;
+				@keyframes optionHover {
+					0%{border-color: rgba($color: #fff, $alpha: .1);}
+					50%{border-color: rgba($color: #fff, $alpha: .5);}
+					100%{border-color: rgba($color: #fff, $alpha: .9);}
+				}
+			}
+		}
+	}
+}

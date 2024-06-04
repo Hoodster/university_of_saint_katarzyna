@@ -1,0 +1,17 @@
+@mixin init-template() {
+	.container {
+		display: grid;
+		width: 100vw;
+		height: 10vh;
+	}
+}
+
+@mixin mapAreas($areas) {
+	@each $name, $properties in $areas {
+		#{$name} {
+			@each $prop, $value in $properties {
+				#{$prop}: $value
+			}
+		}
+	}
+}

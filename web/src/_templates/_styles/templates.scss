@@ -1,0 +1,16 @@
+@import url('../../assets/_fonts/fonts.scss');
+
+h1,h2,h3,p,span {
+	color: hsl(0, 0%, 88%);
+}
+
+h1 {
+	font: bold 36px 'SK-Modernist';
+	font-weight: bold;
+	word-wrap: break-word;	
+}
+
+h2 {
+	font: normal 25px 'Futura';
+	word-wrap: break-word;
+}
