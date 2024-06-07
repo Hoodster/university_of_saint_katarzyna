@@ -17,7 +17,7 @@ const content = {
         slides: [
             {
                 template: 'error',
-                background: {src: 'error-page.mp4', sourceType: SourceType.video},
+                background: { src: 'error-page.mp4', sourceType: SourceType.video },
                 headline: '404',
                 subHeadlines: ['This page exists only theoretically.']
             }
@@ -67,7 +67,7 @@ const content = {
                 ],
             },
             {
-                background: placeholderBackground,
+                background: { src: 'school.jpg', sourceType: SourceType.image },
                 template: 'default',
                 headline: 'From students for students',
                 subHeadlines: [
@@ -233,8 +233,8 @@ const content = {
             {
                 background: {
                     src: [
-                    ['#ffecd2', '#fcb69f'],
-                    ['#fdfcfb', '#e2d1c3']],
+                        ['#ffecd2', '#fcb69f'],
+                        ['#fdfcfb', '#e2d1c3']],
                     sourceType: SourceType.gradient
                 },
                 template: 'news',
