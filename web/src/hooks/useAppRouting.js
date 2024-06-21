@@ -3,7 +3,7 @@ import Root from "../components/root"
 import Students from "../pages/students"
 import Employees from "../pages/employees"
 import Home from "../pages/home"
-import content from "../_content"
+import content from "../_content/_content"
 import Business from "../pages/business"
 import News from '../pages/news'
 import ErrorBoundary from "../pages/error/error"

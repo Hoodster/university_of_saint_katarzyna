@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './app/App';
 import reportWebVitals from './app/reportWebVitals';
-import content from './_content';
+import content from './_content/_content';
 
 window.content = content
 

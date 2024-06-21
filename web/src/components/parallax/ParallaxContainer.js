@@ -2,13 +2,18 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import styles from './parallax.module.scss';
 import ParallaxSection from './ParallaxSection';
 
+/**
+ * 
+ * @type {{slides: string, options: Object}}  
+ * @returns {React.JSX.Element}
+ */
 function ParallaxContainer({ slides, options }) {
     const ref = useRef(null)
     const [height, setHeight] = useState(0);
 
     /**
      * Detects scroll direction by delta Y and scrolls by one page.
-     * @param {WheelEvent} e 
+     * @param {WheelEvent} e
      */
     const handleScrollEvent = useCallback((e) => {
         e.preventDefault();

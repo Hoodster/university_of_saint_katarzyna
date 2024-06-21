@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import ParallaxContainer from "../components/parallax/ParallaxContainer";
 
-function PageBase({ contentKey }) {
+const PageBase = ({ contentKey }) => {
 	const pageSettings = window.content[contentKey];
 	const { slides, options } = pageSettings;
 
