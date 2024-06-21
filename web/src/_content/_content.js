@@ -208,6 +208,7 @@ const content = {
                 background: placeholderBackground,
                 template: 'default',
                 headline: 'Benefits',
+                subHeadline: 'Health Insurance, Flexible Hours, Professional Development, Paid Time Off',
                 options: {
                     benefits: [
                         {

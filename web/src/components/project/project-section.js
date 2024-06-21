@@ -32,8 +32,7 @@ const Section = ({children: {headline, content, contents, icon = null}}) => {
                 <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
-                {content ?? <Text>{content}</Text>}
-                {contents}
+                {content ?? <Text>{content}</Text>} 
             </AccordionPanel>
         </AccordionItem>
     )

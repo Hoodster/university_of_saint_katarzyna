@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Project } from '../../components/project/project';
 import styles from './ProjectSlide.module.scss'
 import { ArrowRightIcon, CheckIcon } from '@chakra-ui/icons'
+import { List, ListItem } from '@chakra-ui/react'
 
 function ProjectSlide({headline, subHeadlines, options}) {
     const [projects, setProjects] = useState([])
@@ -24,14 +25,14 @@ function ProjectSlide({headline, subHeadlines, options}) {
 
         const skillsImpChunk = {
             headline: 'Improved Skills',
-            contents: project.skillsImproved,
+            content: 'Artificial Intelligence, Machine Learning, Healthcare, Smart Contracts, Supply Chain Management',
             icon: <ArrowRightIcon/>
         }
 
 
         const skillsReqChunk = {
             headline: 'RequiredSkills',
-            contents: project.requiredKnowledge,
+            contents: 'Drones, Logistics, Predictive Analytics, Finance, Agriculture',
             icon: <CheckIcon />
         }
 
