@@ -1,8 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom'
-import styles from './navigation.module.scss'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './navigation.module.scss';
 import { Button } from '@chakra-ui/react';
 
-function Navigation({ navItems }) {
+function Navigation({ navItems } : {navItems: any[]}) {
     const navigate = useNavigate();
     return (
         <nav id='navigation' style={styles}>
